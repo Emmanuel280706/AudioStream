@@ -1,0 +1,55 @@
+/* Requerimiento 5: Variables CSS (:root) y fuente de Google */
+:root {
+    --color-1: #2c3e50;
+    --color-2: #3498db;
+    --fuente: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--fuente);
+    /* Requerimiento 5: linear-gradient() sencillo */
+    background: linear-gradient(var(--color-1), var(--color-2));
+    color: white;
+    min-height: 100vh;
+}
+
+/* Requerimiento 4: CSS Grid simple para dividir reproductor y lista */
+.grid-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .grid-principal {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Diseño básico de las cajas */
+.caja {
+    background-color: #222;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.visualizador {
+    background-color: #444;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+/* Requerimiento 6: Hover y transición simple */
+.btn-hover, .item-cancion {
+    transition: 0.2s;
+}
+
+.item-cancion {
+    background-color: #333;
+    border: 1px solid #777;
+    cursor: pointer;
+}
+
+.btn-hover:hover, .item-cancion:hover {
+    background-color: #555;
+}
